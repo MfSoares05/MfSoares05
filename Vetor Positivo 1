@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+#define TAMANHO_VETOR 15
+
+int main() {
+    int vetor[TAMANHO_VETOR];
+    int i;
+
+    // Leitura do vetor
+    printf("Digite os %d números inteiros do vetor:\n", TAMANHO_VETOR);
+    for (i = 0; i < TAMANHO_VETOR; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    // Impressão dos números positivos
+    printf("Números positivos do vetor:\n");
+    for (i = 0; i < TAMANHO_VETOR; i++) {
+        if (vetor[i] > 0) {
+            printf("%d ", vetor[i]);
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}
