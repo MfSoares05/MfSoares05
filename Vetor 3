@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+#define TAMANHO_VETOR 20
+
+int main() {
+    int vetor[TAMANHO_VETOR];
+    int i;
+    int pares = 0;
+    int impares = 0;
+    int maioresQue50 = 0;
+    int menoresQue7 = 0;
+
+    // Leitura do vetor
+    printf("Digite os %d números inteiros do vetor:\n", TAMANHO_VETOR);
+    for (i = 0; i < TAMANHO_VETOR; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    // Contagem de números pares, ímpares, maiores que 50 e menores que 7
+    for (i = 0; i < TAMANHO_VETOR; i++) {
+        if (vetor[i] % 2 == 0) {
+            pares++;
+        } else {
+            impares++;
+        }
+
+        if (vetor[i] > 50) {
+            maioresQue50++;
+        }
+
+        if (vetor[i] < 7) {
+            menoresQue7++;
+        }
+    }
+
+    // Impressão dos resultados
+    printf("Quantidade de números pares: %d\n", pares);
+    printf("Quantidade de números ímpares: %d\n", impares);
+    printf("Quantidade de números maiores que 50: %d\n", maioresQue50);
+    printf("Quantidade de números menores que 7: %d\n", menoresQue7);
+
+    return 0;
+}
